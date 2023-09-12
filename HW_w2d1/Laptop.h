@@ -14,6 +14,10 @@ class Laptop
 	VPU vpu;
 public:
 	static int amount;
-
+	Laptop();
+	Laptop(const char* m, int y, const char* engName, int price);
+	Laptop(const Laptop& b);
+	~Laptop();
+	void Print();
 };
 
