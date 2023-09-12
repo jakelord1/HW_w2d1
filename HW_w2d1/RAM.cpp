@@ -19,6 +19,10 @@ RAM::RAM(const RAM& obj)
 	price = obj.price;
 	std::cout << "Copy constructor\n";
 }
+RAM::~RAM()
+{
+	delete[] model;
+}
 void RAM::SetName(char* n)
 {
 	if (model != nullptr)

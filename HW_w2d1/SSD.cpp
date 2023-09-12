@@ -19,6 +19,10 @@ SSD::SSD(const SSD& obj)
 	price = obj.price;
 	std::cout << "Copy constructor\n";
 }
+SSD::~SSD()
+{
+	delete[] model;
+}
 void SSD::SetName(char* n)
 {
 	if (model != nullptr)

@@ -19,6 +19,10 @@ CPU::CPU(const CPU& obj)
 	price = obj.price;
 	std::cout << "Copy constructor\n";
 }
+CPU::~CPU()
+{
+	delete[] model;
+}
 void CPU::SetName(char* n)
 {
 	if (model != nullptr)

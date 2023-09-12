@@ -15,7 +15,7 @@ class Laptop
 public:
 	static int amount;
 	Laptop();
-	Laptop(const char* m, int y, const char* engName, int price);
+	Laptop(const char* m, const char* c, const char* cpuname, int cpuprice, const char* ramname, int ramprice, const char* vpuname, int vpuprice, const char* ssdname, int ssdprice);
 	Laptop(const Laptop& b);
 	~Laptop();
 	void Print();

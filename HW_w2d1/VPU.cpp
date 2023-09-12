@@ -19,6 +19,10 @@ VPU::VPU(const VPU& obj)
 	price = obj.price;
 	std::cout << "Copy constructor\n";
 }
+VPU::~VPU()
+{
+	delete[] model;
+}
 void VPU::SetName(char* n)
 {
 	if (model != nullptr)
