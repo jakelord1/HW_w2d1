@@ -13,7 +13,7 @@ class Laptop
 	SSD ssd;
 	VPU vpu;
 public:
-	static int amount;
+	//static int count; Тут возникает ошибка LNK1120 из-за LNK2001, и не нашел в интернете решение этой ошибки
 	Laptop();
 	Laptop(const char* m, const char* c, const char* cpuname, int cpuprice, const char* ramname, int ramprice, const char* vpuname, int vpuprice, const char* ssdname, int ssdprice);
 	Laptop(const Laptop& b);

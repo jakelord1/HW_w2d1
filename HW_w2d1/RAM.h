@@ -10,10 +10,10 @@ public:
 	RAM(const RAM& obj);
 	~RAM();
 	char* GetName() const { return model; };
-	int GetPrice() const { return price; };
+	double GetPrice() const { return price; };
 	void Print();
 	void SetName(char* n);
-	void SetPrice(int pr);
+	void SetPrice(double pr);
 	
 };
 

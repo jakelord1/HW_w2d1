@@ -32,10 +32,10 @@ void RAM::SetName(char* n)
 	model = new char[strlen(n) + 1];
 	strcpy_s(model, strlen(n) + 1, n);
 }
-void RAM::SetPrice(int pr)
+void RAM::SetPrice(double pr)
 {
 	pr = price;
 }
 void RAM::Print() {
-	std::cout << "Model CPU: " << model << "\tPrice: " << price << "$\n";
+	std::cout << "Model RAM: " << model << "\t\tPrice: " << price << "$\n\n";
 }

@@ -14,13 +14,15 @@ Laptop::Laptop(const char* m, const char* c, const char* cpuname, int cpuprice, 
 	this->color = new char[strlen(c) + 1];
 	strcpy_s(this->color, strlen(c) + 1, c);
 	this->price = cpuprice+ramprice+vpuprice+ssdprice;
-	++amount;
+	//++count;
 }
 
 Laptop::Laptop(const Laptop& b)
 {
 	name = new char[strlen(b.name) + 1];
 	strcpy_s(name, strlen(b.name) + 1, b.name);
+	color = new char[strlen(b.color) + 1];
+	strcpy_s(color, strlen(b.color) + 1, b.color);
 	price = b.price;
 
 	cpu.SetName(b.cpu.GetName());
@@ -44,5 +46,9 @@ Laptop::~Laptop()
 
 void Laptop::Print()
 {
-	std::cout << "Laptop Name: " << name << "\tColor: " << color << "\tPrice: " << price << "$\tAmount: " << amount << "\n";
+	std::cout << "Laptop Name: " << name << "\tColor: " << color << "\tPrice: " << price << "\n\n";
+	cpu.Print();
+	vpu.Print();
+	ram.Print();
+	ssd.Print();
 }

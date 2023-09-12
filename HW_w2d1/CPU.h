@@ -11,8 +11,8 @@ public:
 	~CPU();
 	void SetName(char* n);
 	char* GetName() const { return model; };
-	int GetPrice() const { return price; };
-	void SetPrice(int pr);
+	double GetPrice() const { return price; };
+	void SetPrice(double pr);
 	void Print();
 };
 

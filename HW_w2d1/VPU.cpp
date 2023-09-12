@@ -32,10 +32,10 @@ void VPU::SetName(char* n)
 	model = new char[strlen(n) + 1];
 	strcpy_s(model, strlen(n) + 1, n);
 }
-void VPU::SetPrice(int pr)
+void VPU::SetPrice(double pr)
 {
 	pr = price;
 }
 void VPU::Print() {
-	std::cout << "Model CPU: " << model << "\tPrice: " << price << "$\n";
+	std::cout << "Model VPU: " << model << "\tPrice: " << price << "$\n\n";
 }

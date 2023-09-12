@@ -32,10 +32,10 @@ void SSD::SetName(char* n)
 	model = new char[strlen(n) + 1];
 	strcpy_s(model, strlen(n) + 1, n);
 }
-void SSD::SetPrice(int pr)
+void SSD::SetPrice(double pr)
 {
 	pr = price;
 }
 void SSD::Print() {
-	std::cout << "Model CPU: " << model << "\tPrice: " << price << "$\n";
+	std::cout << "Model SSD: " << model << "\tPrice: " << price << "$\n\n";
 }
