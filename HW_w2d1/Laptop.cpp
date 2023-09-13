@@ -1,5 +1,5 @@
 #include "Laptop.h"
-
+int Laptop::count = 0;
 Laptop::Laptop()
 {
 	name = nullptr;
