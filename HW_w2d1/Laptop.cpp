@@ -7,13 +7,14 @@ Laptop::Laptop()
 	price = 0;
 }
 
-Laptop::Laptop(const char* m, const char* c, const char* cpuname, int cpuprice, const char* ramname, int ramprice, const char* vpuname, int vpuprice, const char* ssdname, int ssdprice):cpu(cpuname, cpuprice),ram(ramname, ramprice),ssd(ssdname,ssdprice),vpu(vpuname,vpuprice)
+Laptop::Laptop(const char* m, const char* c, const char* cpuname, int cpuprice, const char* ramname, int ramprice, const char* vpuname, int vpuprice, const char* ssdname, int ssdprice, const char* kbdn):cpu(cpuname, cpuprice),ram(ramname, ramprice),ssd(ssdname,ssdprice),vpu(vpuname,vpuprice),kbd(kbdn)
 {
 	this->name = new char[strlen(m) + 1];
 	strcpy_s(this->name, strlen(m) + 1, m);
 	this->color = new char[strlen(c) + 1];
 	strcpy_s(this->color, strlen(c) + 1, c);
 	this->price = cpuprice+ramprice+vpuprice+ssdprice;
+	kbd.SetName(kbdn);
 	++count;
 }
 
@@ -42,6 +43,11 @@ Laptop::~Laptop()
 {
 	delete[] name;
 	delete[] color;
+}
+
+void Laptop::SetMouse(const char* ms)
+{
+	*mouse = ms;
 }
 
 void Laptop::Print()
